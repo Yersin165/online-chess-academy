@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+Project Idea & Purpose:
+Online Chess Academy is a web application designed to help beginners and intermediate players improve their chess skills through structured lessons, practice 
+exercises, and game analysis tools. The goal of the platform is to make chess education accessible and interactive in a simple and modern web interface.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Target Audience:
+The target audience includes beginner and intermediate chess players, students who want to improve their tactical and strategic understanding, and anyone interested in structured chess learning online.
 
-## Available Scripts
+Problem the Application Solves:
+Many beginners struggle to find structured and organized chess learning materials. Online Chess Academy provides categorized lessons, practice problems, and interactive components in one place, making learning efficient and engaging.
 
-In the project directory, you can run:
+Minimum Viable Product (MVP) Features:
+1. Home page with academy introduction
+2. Lessons page (basic chess principles)
+3. Simple navigation system
+4. Structured component-based layout
+5. Clean and responsive UI
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+What is a Single Page Application (SPA)?
+A Single Page Application (SPA) is a web application that loads a single HTML page and dynamically updates content without reloading the entire page. Instead of requesting new pages from the server, the application updates specific parts of the interface using JavaScript. This provides a smoother and faster user experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+How does SPA differ from MPA?
+A Multi-Page Application (MPA) reloads the entire page every time the user navigates to a different section. In contrast, an SPA loads content dynamically without full page reloads. SPAs are generally faster after initial load and provide a more app-like experience.
 
-### `npm test`
+What is the Virtual DOM?
+The Virtual DOM is a lightweight copy of the real DOM used by React. When changes occur, React updates the Virtual DOM first, compares it with the previous version, and then updates only the necessary parts of the real DOM. This improves performance and efficiency.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Why does React use component-based architecture?
+React uses a component-based architecture to make applications modular, reusable, and easier to maintain. Each component represents a part of the UI and can be reused across different pages. This improves scalability and code organization.
 
-### `npm run build`
+## Application Screenshot
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![Home Page](./screenshots/home-page.png)
