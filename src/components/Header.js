@@ -3,7 +3,7 @@ import React from "react";
 function Header() {
   return (
     <header className="header">
-      <h1>♟️ Online Chess Academy</h1>
+      <h1>Online Chess Academy</h1>
       <nav>
         <a href="#">Home</a>
         <a href="#">Lessons</a>
