@@ -1,49 +1,99 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-  }
-  
-  .header {
-    background-color: #222;
-    color: white;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .header nav a {
-    margin: 0 15px;
-    color: #ffd700;
-    text-decoration: none;
-  }
-  
-  .header nav a:hover {
-    text-decoration: underline;
-  }
-  
-  .main {
-    padding: 40px;
-    text-align: center;
-  }
-  
-  .main button {
-    padding: 10px 20px;
-    background-color: #222;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .main button:hover {
-    background-color: #444;
-  }
-  
-  .footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #222;
+}
+
+.app-container {
+  min-height: 100vh;
+}
+
+.header {
+  background-color: #1f1f1f;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.main-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-bar,
+.filter-panel,
+.lesson-form,
+.stats-block {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.search-bar input,
+.filter-panel select,
+.lesson-form input,
+.lesson-form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.lesson-form button,
+.card-buttons button {
+  padding: 10px 14px;
+  margin-right: 10px;
+  border: none;
+  background-color: #222;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.lesson-form button:hover,
+.card-buttons button:hover {
+  background-color: #444;
+}
+
+.lesson-list {
+  display: grid;
+  gap: 16px;
+}
+
+.lesson-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.lesson-card.completed {
+  border-left: 6px solid green;
+}
+
+.card-buttons {
+  margin-top: 10px;
+}
+
+.no-items {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: #1f1f1f;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}

@@ -3,7 +3,7 @@ import React from "react";
 function Footer() {
   return (
     <footer className="footer">
-      <p>© 2026 Online Chess Academy | All Rights Reserved</p>
+      <p>© 2026 Online Chess Academy</p>
     </footer>
   );
 }
