@@ -1,11 +1,10 @@
 import React from "react";
 import LessonCard from "./LessonCard";
 
-function LessonList({ lessons, onDeleteLesson, onToggleCompleted }) {
+function LessonList({ lessons, onDeleteLesson, onToggleCompleted, onEditLesson }) {
   if (lessons.length === 0) {
     return <p className="no-items">No lessons found.</p>;
   }
-
   return (
     <div className="lesson-list">
       {lessons.map((lesson) => (
@@ -14,6 +13,7 @@ function LessonList({ lessons, onDeleteLesson, onToggleCompleted }) {
           lesson={lesson}
           onDeleteLesson={onDeleteLesson}
           onToggleCompleted={onToggleCompleted}
+          onEditLesson={onEditLesson}
         />
       ))}
     </div>
