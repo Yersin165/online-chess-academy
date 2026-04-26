@@ -1,32 +1,77 @@
-Project Idea & Purpose:
-Online Chess Academy is a web application designed to help beginners and intermediate players improve their chess skills through structured lessons, practice 
-exercises, and game analysis tools. The goal of the platform is to make chess education accessible and interactive in a simple and modern web interface.
+# ♟ Chess Academy
 
-Target Audience:
-The target audience includes beginner and intermediate chess players, students who want to improve their tactical and strategic understanding, and anyone interested in structured chess learning online.
+A full-featured React SPA for managing chess lessons and courses. Built as a semester-long project covering core and advanced React concepts.
 
-Problem the Application Solves:
-Many beginners struggle to find structured and organized chess learning materials. Online Chess Academy provides categorized lessons, practice problems, and interactive components in one place, making learning efficient and engaging.
+## 🚀 Live Demo
+> Add your Vercel/Netlify URL here after deployment
 
-# Online Chess Academy
+## 🛠 Tech Stack
+- React 18
+- React Router v6
+- Context API (ThemeContext, UserContext)
+- MockAPI (REST API)
+- CSS3 (custom, responsive)
+- localStorage for persistence
 
-Online Chess Academy is a React Single Page Application designed to help users explore and manage chess lessons. The application allows users to browse lessons, search by title, filter by level, sort by title or duration, add new lessons, delete lessons, and track progress.
+## ✨ Features
+- 🔐 Authentication — register, login, logout with credential validation
+- 🌙 Dark / Light theme toggle with persistence
+- ♟ Lessons CRUD — add, edit, delete, complete via real API
+- 🔍 Real-time search with debounce, filter by level, sort by title/duration
+- 📚 Courses page with nested routes and detail view
+- 🛡 Protected routes — unauthenticated users redirected to login
+- 📱 Fully responsive — mobile and desktop
+- 💾 localStorage persistence — theme, user session
+- ⚡ useMemo for optimized filtering, useCallback for handlers
+- 🔄 Loading, error, and empty states for all API operations
 
-## Features
+## 📁 Project Structure
+src/
+├── components/      # Reusable UI components
+├── context/         # ThemeContext, UserContext
+├── data/            # Static course data
+├── hooks/           # useFetch, useLocalStorage, useDebounce
+├── pages/           # All page components
+├── services/        # API service layer (lessonService)
+├── utils/           # Helper functions
+├── App.js
+├── index.js
+└── styles.css
 
-- View a list of chess lessons
-- Add a new lesson with a form
-- Delete lessons
-- Mark lessons as completed or incomplete
-- Search lessons by keyword
-- Filter lessons by level
-- Sort lessons by title or duration
-- View lesson statistics
+## ⚙️ Setup Instructions
 
-## How to Run
+1. Clone the repository
+```bash
+git clone https://github.com/YOUR_USERNAME/chess-academy.git
+cd chess-academy
+```
 
-1. Open the project folder
-2. Run `npm install`
-3. Run `npm start`
+2. Install dependencies
+```bash
+npm install
+```
 
-The application will open in the browser at `http://localhost:3000`
+3. Start the development server
+```bash
+npm start
+```
+
+4. Open [http://localhost:3000](http://localhost:3000)
+
+## 📸 Screenshots
+
+### Home Page
+![Home](screenshots/home.png)
+
+### Dark Mode
+![Dark Mode](screenshots/dark-mode.png)
+
+### Courses
+![Courses](screenshots/courses.png)
+
+### Login
+![Login](screenshots/login.png)
+
+## 🔗 API
+Lessons data is powered by [MockAPI](https://mockapi.io).  
+Base URL: `https://69edf76d9163f839f89259ed.mockapi.io/lessons`

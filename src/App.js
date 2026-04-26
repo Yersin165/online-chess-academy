@@ -1,4 +1,4 @@
-import { Routes, Route, Link, useNavigate } from "react-router-dom";
+import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Courses from "./pages/Courses";
@@ -6,6 +6,8 @@ import Contact from "./pages/Contact";
 import CourseDetails from "./pages/CourseDetails";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import NotFound from "./pages/NotFound";
+import ProtectedRoute from "./components/ProtectedRoute";
 import { useContext } from "react";
 import { ThemeContext } from "./context/ThemeContext";
 import { useUser } from "./context/UserContext";
@@ -25,20 +27,22 @@ function App() {
       <nav className="navbar">
         <h2 className="logo">♟ Chess Academy</h2>
         <div className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/courses">Courses</Link>
-          <Link to="/contact">Contact</Link>
+          <NavLink to="/" end className={({ isActive }) => isActive ? "nav-active" : ""}>Home</NavLink>
+          <NavLink to="/about" className={({ isActive }) => isActive ? "nav-active" : ""}>About</NavLink>
+          <NavLink to="/courses" className={({ isActive }) => isActive ? "nav-active" : ""}>Courses</NavLink>
+          <NavLink to="/contact" className={({ isActive }) => isActive ? "nav-active" : ""}>Contact</NavLink>
           {user ? (
             <>
-              <Link to="/profile" className="nav-user">👤 {user.name}</Link>
+              <NavLink to="/profile" className={({ isActive }) => isActive ? "nav-active" : ""}>
+                👤 {user.name}
+              </NavLink>
               <button onClick={handleLogout} className="nav-theme-btn">Logout</button>
             </>
           ) : (
-            <Link to="/login" className="nav-login-btn">Login</Link>
+            <NavLink to="/login" className={({ isActive }) => isActive ? "nav-login-btn" : "nav-login-btn"}>Login</NavLink>
           )}
           <button onClick={toggleTheme} className="nav-theme-btn">
-            {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+            {theme === "light" ? " Dark" : "Light"}
           </button>
         </div>
       </nav>
@@ -51,7 +55,16 @@ function App() {
         </Route>
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route
+          path="/profile"
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          }
+        />
+        {/* 404 — must be last */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
