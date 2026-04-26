@@ -11,6 +11,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import { useContext } from "react";
 import { ThemeContext } from "./context/ThemeContext";
 import { useUser } from "./context/UserContext";
+import Lessons from "./pages/Lessons";
 
 function App() {
   const { theme, toggleTheme } = useContext(ThemeContext);
@@ -28,6 +29,7 @@ function App() {
         <h2 className="logo">♟ Chess Academy</h2>
         <div className="nav-links">
           <NavLink to="/" end className={({ isActive }) => isActive ? "nav-active" : ""}>Home</NavLink>
+          <NavLink to="/lessons" className={({ isActive }) => isActive ? "nav-active" : ""}>Lessons</NavLink>
           <NavLink to="/about" className={({ isActive }) => isActive ? "nav-active" : ""}>About</NavLink>
           <NavLink to="/courses" className={({ isActive }) => isActive ? "nav-active" : ""}>Courses</NavLink>
           <NavLink to="/contact" className={({ isActive }) => isActive ? "nav-active" : ""}>Contact</NavLink>
@@ -54,6 +56,8 @@ function App() {
           <Route path=":id" element={<CourseDetails />} />
         </Route>
         <Route path="/contact" element={<Contact />} />
+        <Route path="/lessons" element={<ProtectedRoute><Lessons />
+        </ProtectedRoute>} />
         <Route path="/login" element={<Login />} />
         <Route
           path="/profile"

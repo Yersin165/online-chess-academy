@@ -1,8 +1,20 @@
-import { Link, Outlet, useParams } from "react-router-dom";
+import { Link, Outlet, useParams, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import courses from "../data/courses";
+import { useUser } from "../context/UserContext";
 
 function Courses() {
   const { id } = useParams();
+  const { user } = useUser();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!user) {
+      navigate("/login");
+    }
+  }, [user, navigate]);
+
+  if (!user) return null;
 
   return (
     <div className="page-container">
@@ -16,7 +28,9 @@ function Courses() {
             {courses.map((course) => (
               <Link to={course.id} key={course.id} className="course-card-link">
                 <div className="course-card">
-                  <span className={`course-badge ${course.level.toLowerCase()}`}>{course.level}</span>
+                  <span className={`course-badge ${course.level.toLowerCase()}`}>
+                    {course.level}
+                  </span>
                   <h3>{course.title}</h3>
                   <p>{course.description.slice(0, 100)}...</p>
                   <div className="course-meta">
